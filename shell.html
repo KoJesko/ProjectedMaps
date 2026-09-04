@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Projection Follows the Task</title>
+<style>
+/*CSS*/
+</style>
+</head>
+<body>
+
+<header class="masthead">
+  <div class="mast-title">
+    <h1>The projection follows the task</h1>
+    <p>A working demonstration for the Lomé implementation meeting. Resolution A/RES "Correct the Map", adopted 4 September 2026, 164&ndash;1&ndash;6.</p>
+  </div>
+  <div class="mast-note" id="mastNote"></div>
+</header>
+
+<main class="frame">
+
+  <nav class="rail" aria-label="Task">
+    <p class="rail-lede">What is the user doing?</p>
+    <div class="tasks" id="tasks" role="radiogroup" aria-label="Task"></div>
+
+    <div class="rail-block">
+      <label class="switch">
+        <input type="checkbox" id="cmp">
+        <span>Show the same task in Web Mercator</span>
+      </label>
+      <label class="switch">
+        <input type="checkbox" id="tissot">
+        <span>Show distortion ellipses</span>
+      </label>
+    </div>
+
+    <div class="rail-block readout" id="readout"></div>
+
+  </nav>
+
+  <section class="stage" id="stage">
+    <div class="pane" id="paneA">
+      <div class="pane-head">
+        <h2 id="titleA">&nbsp;</h2>
+        <p id="subA">&nbsp;</p>
+      </div>
+      <svg id="mapA" role="img" aria-labelledby="titleA"></svg>
+    </div>
+    <div class="pane pane-b" id="paneB" hidden>
+      <div class="pane-head">
+        <h2 id="titleB">Web Mercator</h2>
+        <p id="subB">What every navigation app ships today</p>
+      </div>
+      <svg id="mapB" role="img" aria-labelledby="titleB"></svg>
+    </div>
+  </section>
+
+</main>
+
+<footer class="foot">
+  <p id="argument"></p>
+  <p class="foot-note">Every number in the readout is measured from the projection itself, not asserted. Angles off by 0.00&deg; means the projection is conformal at that point, so road geometry is exact. Area and distance are relative to the port of Lom&eacute;.</p>
+</footer>
+
+<script>/*VENDOR*/</script>
+<script>/*LAND*/</script>
+<script>/*APP*/</script>
+</body>
+</html>

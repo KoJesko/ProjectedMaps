@@ -1,0 +1,17 @@
+{
+  "name": "projected-maps",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Projection-switching navigation prototype for the Lome Correct the Map implementation meeting",
+  "scripts": {
+    "build": "node build.js",
+    "test": "node test.js"
+  },
+  "dependencies": {
+    "d3-array": "^3.2.4",
+    "d3-geo": "^3.1.1",
+    "internmap": "^2.0.3",
+    "topojson-client": "^3.1.0",
+    "world-atlas": "^2.0.2"
+  }
+}
